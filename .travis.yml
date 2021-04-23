@@ -7,7 +7,7 @@ script:
   - docker images clgxaweeks/node-test
 
 before_deploy:
-  - docker login -u clgxaweeks -p p9@Pft$,Z/S~x$U
+  - docker login -u clgxaweeks -p TestPassword!
 
 deploy:
   provider: script
