@@ -3,5 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node 
+  - docker build -t clgxaweeks/node-test .
+  - docker images clgxaweeks/node-test
+
+before_deploy:
+  - docker login -u clgxaweeks -p p9@Pft$,Z/S~x$U
+
+deploy:
+  provider: script
+  script: docker push clgxaweeks/node-test
+  on:
+    branch: main
